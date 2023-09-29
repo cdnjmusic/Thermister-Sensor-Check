@@ -13,8 +13,6 @@
 
 🔌 Connect the dots to set up your system:
 
-<img src="https://raw.githubusercontent.com/cdnjmusic/Thermister-Sensor-Check/master/wiring-diagram.png" alt="Wiring Diagram">
-
 1. 🌡️ Attach the thermistor and a 10K resistor in series.
 2. 🧊 Link the thermistor-resistor junction to analog pin A0 on the Arduino.
 3. 💚 Connect Green LED to pin 2, Yellow LED to pin 3, and Red LED to pin 4.
