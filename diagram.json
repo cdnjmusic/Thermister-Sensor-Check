@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": -130.63,
+      "left": 11.15,
+      "attrs": { "beta": "3950", "temperature": "33" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -84.8,
+      "left": 176.64,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -84.79,
+      "left": 205.54,
+      "attrs": { "color": "yellow", "flip": "" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -84.08,
+      "left": 233.38,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -22.72,
+      "left": 133.42,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "ntc1:OUT", "uno:A0", "green", [ "h178", "v319", "h-81" ] ],
+    [ "ntc1:VCC", "uno:VIN", "red", [ "h206", "v351", "h-137" ] ],
+    [ "ntc1:GND", "uno:GND.1", "black", [ "h26", "v78", "h-58" ] ],
+    [ "led3:A", "uno:2", "green", [ "v0" ] ],
+    [ "led2:A", "uno:3", "green", [ "v0" ] ],
+    [ "led1:A", "uno:4", "green", [ "v0" ] ],
+    [ "led1:C", "r1:2", "green", [ "v0" ] ],
+    [ "led2:C", "r1:2", "green", [ "v0" ] ],
+    [ "led3:C", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "uno:GND.1", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
